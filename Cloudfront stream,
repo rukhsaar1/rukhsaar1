@@ -1,0 +1,19 @@
+$ ./cf-streaming-distribution.rb --help
+
+Synopsis
+
+cf-streaming-distribution: Manipulate Amazon Cloudfront Streaming
+Distributions
+
+Usage
+
+cf-streaming-distribution.rb [OPTIONS] [command] [args]
+
+/cf-streaming-distribution.rb create my-video-bucket \
+	--cname cf.example.com \
+	-m "private streaming distribution (rtmp) with origin bucket: my-video-bucket"
+     
+./cf-origin-access-id.rb grant E2CWXW8B1U3YJU my-video-bucket
+  Applying grant [E2CWXW8B1U3YJU:'FULL_CONTROL'] on: my-video-bucket/flvs/video01.flv
+  Applying grant [E2CWXW8B1U3YJU:'FULL_CONTROL'] on: my-video-bucket/flvs/video02.flv
+  
